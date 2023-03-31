@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #BDCEDB;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fundo {
+    background-color: #BDCEDB;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.header .container {
+    justify-content: space-between;
+}
+
+.header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.agora {
+    font-weight: 800;
+}
+
+.logo {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px
+}
+
+.navbar {
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: #ffffff;
+}
+
+.botao_cliente {
+    background-color: #1e3a4e;
+    border-radius: 33px;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fundo_calculadora {
+    width: 400px;
+    height: 450px;
+    background-color: #e1e1e18f;
+    text-align: center;
+    justify-content: center;
+    margin-left: 35%;
+    border-radius: 10%;
+}
+
+.colocar {
+    width: 75%;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 40px;
+
+}
+
+.simulador {
+    justify-content: center;
+    align-items: center;
+    margin-left: 37%;
+
+}
+
+.div_caixas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.caixa_1 {
+    width: 400px;
+    height: 300px;
+    background-color: #e1e1e18f;
+    border-radius: 8%;
+    margin-left: 200px;
+}
+
+.caixa_2 {
+    width: 400px;
+    height: 300px;
+    background-color: #e1e1e18f;
+    border-radius: 10%;
+    margin-right: 250px;
+}
+
+.info {
+    text-align: center;
+    margin-right: 35px;
+    font-size: 120%;
+}
+
+.sem {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.com {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto {
+    margin-left: 35px;
+}
+
+.texto2 {
+    margin-left: 35px;
+}

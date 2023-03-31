@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Fianceiro 💸</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+
+<body class="body">
+    <div class="fundo">
+        <div class="header">
+            <div class="container">
+                <img src="pic/logo_vacsense SEM FUNDO.png" width="17%" height="17%" class="logo">
+                <ul class="navbar">
+                    <li>Home</li>
+                    <li>Quem Somos</li>
+                    <li>VacSense</li>
+                    <li style="color: #1f3a4b ;">Simulador</li>
+                    <li>Cadastro</li>
+                    <li>Contato </li>
+                    <div class="botao_cliente">
+                        <li>Área do Cliente </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div><br>
+
+    <div class="simulador">
+        <img width="40%" src="pic/logocalc.png">
+    </div>
+
+    <br>
+    <div class="fundo_calculadora"><br>
+
+        <h4>Selecione a Vacina:</h4>
+        <select name="nome da vacina" id="nome_vacina" class="colocar">
+            <option></option>
+            <option id="TplcV">Tríplice Viral</option>
+            <option id="BCG">BCG</option>
+            <option id="Febre Amarela">Hepatite B</option>
+            <option id="HPV">Febre Amarela</option>
+        </select><br>
+
+        <h4>Total de Vacinas Armazenadas :</h4>
+        <input class="colocar" id="total_vacina"><br>
+
+        <h4>Valor da Unidade da Vacina:</h4>
+        <input placeholder="R$" class="colocar" id="valor_vacina"><br><br>
+
+        <a style="text-decoration: none; color: white;" href="#div_engloba"><button class="botao_cliente" onclick="ver_economia()">Calcular</button></a>
+    </div><br><br>
+
+    <div class="info" id="div_informacao">
+        <p>Vacina:  </p>
+        <p>Total de Vacinas:</p>
+        <p>Valor da Vacina:</p>
+    </div><br><br>
+
+
+    <div class="div_caixas" id="div_engloba">
+
+        <div class="caixa_1">
+
+            <div class="sem">
+                <img src="pic/sem.png" width="60%" height="auto">
+            </div><br>
+
+            <div class="texto" id="div_texto">
+            </div>
+
+        </div>
+
+        <h1>X</h1>
+
+        <div class="caixa_2">
+            <div class="com">
+                <img src="pic/com.png" width="60%" height="auto">
+            </div><br>
+
+            <div class="texto2" id="div_texto2">
+
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function ver_economia(){
+    var nome = nome_vacina.value
+    var total_vac = Number(total_vacina.value)
+    var valor = Number(valor_vacina.value)
+    
+    var perda_vacinas = 0.45 * total_vac
+    var prejuizo = perda_vacinas * valor
+
+    var vacina_poupada = perda_vacinas * 0.75
+    var economia_vacsense = prejuizo * 0.75
+
+    div_informacao.innerHTML= 
+        `<p>Vacina: ${nome}</p>
+        <p>Total de Vacinas: ${total_vac}</p>
+        <p>Valor da Vacina: ${valor}</p>`
+
+    div_texto.innerHTML = 
+                `<p>Vacinas Perdidas: ${perda_vacinas.toFixed(0)}</p><br>
+                <p>Prejuizo p/Mês: R$${prejuizo.toFixed(0)}</p>
+                <p>Prejuizo p/Ano: R$${prejuizo.toFixed(0) * 12}</p>`
+    
+
+    div_texto2.innerHTML = 
+                ` <p>Vacinas Poupadas: ${vacina_poupada.toFixed(0)} </p><br>
+                <p>Economia p/Mês: R$${economia_vacsense.toFixed(0)} </p>
+                <p>Economia p/Ano: R$${economia_vacsense.toFixed(0) * 12}</p>`
+}
+</script>
